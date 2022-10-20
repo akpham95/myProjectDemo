@@ -17,11 +17,16 @@ var rollbar = new Rollbar({
 // record a generic message and send it to Rollbar
 rollbar.log('Hello world!')
 
-const { getHTML, getCSS, getJS} = require('./controller')
+let myEmail = "akpham95@gmail.com"
+
+const { getHTML, getCSS, getJS, getRollbar} = require('./controller')
 
 app.get('/', getHTML)
 app.get('/css', getCSS)
 app.get('/js', getJS)
+
+app.get('/rollbar', getRollbar)
+
 
 const port = process.env.PORT || 4000
 
