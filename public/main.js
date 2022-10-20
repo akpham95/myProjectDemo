@@ -1,7 +1,7 @@
-let castle = document.querySelector('img')
+let contactButton = document.querySelector('button-10')
 
 const helloAlert = evt => {
-    alert("Welcome to my castle!")
+    alert("Alert on click")
 }
 
-castle.addEventListener('click', helloAlert)
+contactButton.addEventListener('click', helloAlert)
