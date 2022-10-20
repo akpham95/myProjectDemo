@@ -20,7 +20,7 @@ function putThingInView(res) {
 contactButton.addEventListener("click", putEmailInView)
 
 axios
-    .get('/api/myEmail')
+    .get('/rollbar')
     .then(res => {
-
+        console.log(res)
     })
