@@ -1,6 +1,7 @@
-let contactButton = document.querySelector('button-10')
+let contactButton = document.querySelector('.button-10')
 
 const helloAlert = evt => {
+    
     alert("Alert on click")
 }
 
