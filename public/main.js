@@ -2,8 +2,10 @@ let contactButton = document.querySelector(".button-10")
 const container = document.querySelector('section');
 
 const helloAlert = evt => {
-
-    alert("Alert on click")
+    axios.get('/rollbar')
+        .then(res => {
+            alert(res.data)
+        })
 }
 
 function contactHandler(evt) {
@@ -17,10 +19,4 @@ function putThingInView(res) {
     container.innerHTML = `<p>${res}</p>`
 }
 
-contactButton.addEventListener("click", putEmailInView)
-
-axios
-    .get('/rollbar')
-    .then(res => {
-        console.log(res)
-    })
+contactButton.addEventListener("click", helloAlert)
